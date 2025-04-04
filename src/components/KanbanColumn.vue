@@ -23,9 +23,10 @@ const columnTasks = computed({
   get() {
     return props.tasks;
   },
-  set(value) {
+  set(_value) {
     // This will be called when tasks are reordered within the same column
     // No need to do anything as the array reference is maintained
+    // Using _value prefix to indicate we're intentionally not using this parameter
   }
 });
 
@@ -60,7 +61,7 @@ const headerClass = computed(() => {
       <h3 class="text-lg font-pixel" :class="headerClass">{{ column.name }}</h3>
       <span class="text-white/70 text-sm">{{ tasks.length }}</span>
     </div>
-    
+
     <draggable
       v-model="columnTasks"
       :group="{ name: 'tasks', pull: true, put: true }"
@@ -75,10 +76,10 @@ const headerClass = computed(() => {
         <TaskCard :task="element" />
       </template>
     </draggable>
-    
+
     <div class="mt-4 text-center">
-      <button 
-        @click="emit('addTask', column.id)" 
+      <button
+        @click="emit('addTask', column.id)"
         class="w-full py-2 px-3 bg-retro-dark/50 hover:bg-retro-dark border border-dashed border-white/20 rounded text-white/70 text-sm transition-colors duration-200"
       >
         + Add Task

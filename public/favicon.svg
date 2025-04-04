@@ -7,14 +7,30 @@
       <stop stop-color="#c774e8" offset="50%"></stop>
       <stop stop-color="#64d2ff" offset="100%"></stop>
     </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
   </defs>
   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <rect fill="#1a1a2e" x="0" y="0" width="32" height="32" rx="4"></rect>
-    <rect stroke="url(#gradient)" stroke-width="2" x="4" y="4" width="7" height="24" rx="2"></rect>
-    <rect stroke="url(#gradient)" stroke-width="2" x="13" y="4" width="7" height="24" rx="2"></rect>
-    <rect stroke="url(#gradient)" stroke-width="2" x="22" y="4" width="7" height="24" rx="2"></rect>
-    <circle fill="#ff6ad5" cx="7.5" cy="8" r="1.5"></circle>
-    <circle fill="#c774e8" cx="16.5" cy="14" r="1.5"></circle>
-    <circle fill="#64d2ff" cx="25.5" cy="20" r="1.5"></circle>
+
+    <!-- Kanban board columns -->
+    <g filter="url(#glow)">
+      <rect stroke="url(#gradient)" stroke-width="2" x="4" y="4" width="7" height="24" rx="2"></rect>
+      <rect stroke="url(#gradient)" stroke-width="2" x="13" y="4" width="7" height="24" rx="2"></rect>
+      <rect stroke="url(#gradient)" stroke-width="2" x="22" y="4" width="7" height="24" rx="2"></rect>
+
+      <!-- Sticky notes -->
+      <rect fill="#ff6ad5" x="5" y="7" width="5" height="3" rx="1"></rect>
+      <rect fill="#ff6ad5" x="5" y="12" width="5" height="3" rx="1"></rect>
+
+      <rect fill="#c774e8" x="14" y="9" width="5" height="3" rx="1"></rect>
+      <rect fill="#c774e8" x="14" y="14" width="5" height="3" rx="1"></rect>
+
+      <rect fill="#64d2ff" x="23" y="8" width="5" height="3" rx="1"></rect>
+      <rect fill="#64d2ff" x="23" y="13" width="5" height="3" rx="1"></rect>
+      <rect fill="#64d2ff" x="23" y="18" width="5" height="3" rx="1"></rect>
+    </g>
   </g>
 </svg>
