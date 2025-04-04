@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <title>Retro Kanban</title>
+  <defs>
+    <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="gradient">
+      <stop stop-color="#ff6ad5" offset="0%"></stop>
+      <stop stop-color="#c774e8" offset="50%"></stop>
+      <stop stop-color="#64d2ff" offset="100%"></stop>
+    </linearGradient>
+  </defs>
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <rect fill="#1a1a2e" x="0" y="0" width="32" height="32" rx="4"></rect>
+    <rect stroke="url(#gradient)" stroke-width="2" x="4" y="4" width="7" height="24" rx="2"></rect>
+    <rect stroke="url(#gradient)" stroke-width="2" x="13" y="4" width="7" height="24" rx="2"></rect>
+    <rect stroke="url(#gradient)" stroke-width="2" x="22" y="4" width="7" height="24" rx="2"></rect>
+    <circle fill="#ff6ad5" cx="7.5" cy="8" r="1.5"></circle>
+    <circle fill="#c774e8" cx="16.5" cy="14" r="1.5"></circle>
+    <circle fill="#64d2ff" cx="25.5" cy="20" r="1.5"></circle>
+  </g>
+</svg>
