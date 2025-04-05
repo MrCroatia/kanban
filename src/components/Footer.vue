@@ -11,7 +11,7 @@
         </p>
       </div>
       <div class="text-white/50 font-mono">
-        <p>RETRO KANBAN v1.0.0 // SYNTHWAVE EDITION</p>
+        <p>RETRO KANBAN v1.0.0 // SYNTHWAVE EDITION // FRAGMENT42</p>
       </div>
     </div>
   </footer>
